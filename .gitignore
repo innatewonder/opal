@@ -1,32 +1,55 @@
-#symlinks
-include/networking
-src/networking
+bin/
+obj/
+\!obj/
+objdebug/
+debugrelease/
+releasebin/
+binsettings/
+assets/
+settings
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+core
+networking
 
-# Precompiled Headers
-*.gch
-*.pch
+#  General Linux Files
+*.make
+Makefile
+premake4
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-
-# Compiled Static libraries
-*.lai
-*.la
+#  General Dev files
 *.a
-*.lib
-
-# Executables
+*.so
 *.exe
-*.out
-*.app
+*.suo
+*.sdf
+*.user
+*.ipch
+*.tlog
+*.log
+*.idb
+*.pdb
+*.lastbuildstate
+*.obj
+*.DS_Store
+*.manifest
+*.ilk
+*.user
+*.filters
+*.pch
+*.rc
+*.res
+*.opensdf
+*.unsuccessfulbuild
+*.vcxproj
+*.suo
+*.sln
+*.cache
+*.o
+*.d
+*.psess
+*.vsp
+*.fbx
+*.FBX
+*.sublime-workspace
+*.files
+*.includes

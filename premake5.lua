@@ -1,5 +1,6 @@
-solution "onyx"
+solution "opal"
   configurations { "Debug", "Release" }
+  platforms {"x64"}
 
   configuration { "Debug" }
     targetdir "bin/debug"
@@ -14,20 +15,21 @@ solution "onyx"
 ------------------------
 ------EXE
 ------------------------
-  project "onyx"
+  project "opal"
     language "C++"
     kind     "ConsoleApp"
 
     files  {"src/**.cpp", "include/**.h", "include/**.hpp" }
     links  { 
+    "fmod64_vc",
     }
 
     libdirs { "lib/"}
     if(os.get() == "windows") then
       debugenvs "PATH=%PATH%;$(ProjectDir)"
       links {
-      "Ws2_32",
-      "wsock32"
+        "wsock32",
+        "Ws2_32"
       }
     elseif(os.get() == "linux") then
       buildoptions { "-std=c++11" }
@@ -44,6 +46,9 @@ solution "onyx"
     end
     pchsource ( "src/CommonPrecompiled.cpp" )
 
+    flags {
+    "NoIncrementalLink", "StaticRuntime",
+    "Unicode"}
 
     defines{
     }
